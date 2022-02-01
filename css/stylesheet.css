@@ -1,0 +1,297 @@
+/* Declaracion de variables
+Estos son los colores que elegi para el diseño de la pagina. */
+:root {
+    --negro: #06111C;
+    --celeste:#012E40;
+    --aqua: #00c2a0;
+    --blanco: #f2f2f2;
+    --escarlata: #bf0033;
+    --carmesi: #f20544;
+    --vinotinto:#6b0d44;
+    --font-size: 1.3rem;
+    --mono: "Red Hat Mono", monospace;
+    --sans: "Red Hat Display", sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--sans);
+    background-color: var(--negro);
+    color: var(--blanco);
+    font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+a {
+    color: var(--escarlata);
+}
+
+a:hover {
+    color: var(--carmesi);
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+/* Fondos y gradientes */
+
+.fondo-vinotinto{
+    background-color: var(--vinotinto);
+}
+
+.fondo-celeste{
+    background-color: var(--celeste);
+}
+
+.gradiente{
+    background: linear-gradient(90deg, rgba(191,0,51,1) 0%, rgba(227,26,111,1) 35%, rgba(215,196,219,1) 51%, rgba(78,175,198,1) 65%, rgba(55,255,172,1) 100%);
+    height: 2px;
+}
+
+.gradiente-2{
+    background: linear-gradient(90deg, rgba(55,255,172,1) 0%, rgba(215,196,219,1) 51%, rgba(78,175,198,1) 63%, rgba(227,26,111,1) 85%, rgba(191,0,51,1) 100%);
+    height: 2px;
+}
+/*----- Nav Bar -----*/
+
+nav {
+    padding-top: 3rem;
+    font-family: var(--mono);
+    font-size: 80%;
+
+}
+
+nav h1 a {
+    font-family: var(--sans);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+nav [class*="fa-"] {
+    font-size: 150%;
+    color: var(--aqua);
+}
+nav h1 [class*="fa-"] {
+    font-size: 100%;
+    color: var(--aqua);
+}
+
+nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    display: block;
+}
+
+nav a:hover {
+    color: var(--carmesi);
+}
+
+nav a:hover,
+nav [class*="fa-"]:hover {
+    color: var(--carmesi);
+}
+
+.btn {
+    background-color: var(--escarlata);
+    padding: 0.5rem;
+    border-radius: 15px;
+    font-family: var(--mono);
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+.btn:hover {
+    color: var(--blanco);
+    background-color: var(--carmesi);
+}
+
+@media (min-width: 850px) {
+    nav {
+    max-width: 1250px;
+    margin: 0 auto;
+    }
+    nav li:first-child {
+    flex-basis: auto;
+    margin-right: auto;
+    }
+}
+
+/*----- Introduccion -----*/
+.introduccion {
+    padding: 4rem 1rem 10rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.introduccion p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.introduccion .nombre {
+    font-family: var(--mono);
+}
+
+.nombre span {
+    font-family: var(--sans);
+    font-size: 4rem;
+    color: var(--aqua);
+    display: block;
+}
+
+.introduccion h2 {
+    font-size: 4rem;
+    font-weight: normal;
+    position:relative;
+    overflow: hidden;
+}
+
+.introduccion h2::after {
+    position: absolute;
+    content: "";
+    height:100%;
+    width: 100%;
+    left: 0;
+    background-color: var(--negro);
+    border-left: 2px solid var(--carmesi); 
+    animation: typing 2s steps(300) forwards;
+}
+
+@keyframes typing{
+    100%{
+        left: 57%;
+        margin: 0 -35px 0 35px;
+    }
+}
+/*------CONTACTO  ------*/
+.contacto {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.contacto:lastchild {
+    margin-top: 3rem;
+}
+/*----- Footer -----*/
+footer {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 3rem;
+    font-size: 3rem;
+}
+/*----- Proyectos ------*/
+.proyectos {
+    padding: 4rem;
+}
+
+.proyectos h2{
+    font-size: 2.5rem;
+    margin-bottom: calc(2.5rem + 1.5);
+}
+
+.proyectos h3{
+    color: var(--aqua);
+}
+
+.proyectos h4{
+    font-size: 1rem;
+    font-family: var(--mono);
+    margin: 0;
+}
+
+.texto-fondo{
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 1rem;
+    border-radius: 10px;
+    line-height: 1.5;
+}
+
+.proyectos ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    flex-direction: row wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+.proyectos img {
+    margin: 2rem 0 4rem 0;
+    border-left: 1px solid var(--aqua);
+    border-top: 1px solid var(--aqua);
+    border-radius: 25px;
+    padding: 1rem;
+}
+/*----- MediaQueries -----*/
+@media (min-width: 550px){
+    article {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr) ;
+        gap: 1rem;
+    }
+
+    .proyectos img {
+        grid-column: 1/6;
+        grid-row: 1/2;
+    }
+    .texto{
+        grid-row: 1/2;
+        grid-column: 5/11;
+        order: 2;
+        text-align: right;
+    }
+    .proyectos ul {
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width: 850px) {
+    nav {
+    max-width: 1250px;
+    margin: 0 auto;
+    }
+
+    nav li:first-child {
+    flex-basis: auto;
+    }
+}
